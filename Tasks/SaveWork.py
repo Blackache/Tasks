@@ -24,4 +24,4 @@ def between_markers(text: str, begin: str, end: str) -> str: #Слово меж�
 assert between_markers('What is >apple<', '>', '<') == "apple"
 
 def correct_sentence(text: str) -> str: #Первая буква заглавная и в конце точка, но если она есть, то не добавлять
-    return text[0].upper()+text[1:]+('.' if text[-1] != '.' else '')
+    return text[0].upper()+text[1:]+('.' if text[-1] != '.' else '');
