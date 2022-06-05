@@ -25,3 +25,7 @@ assert between_markers('What is >apple<', '>', '<') == "apple"
 
 def correct_sentence(text: str) -> str: #Первая буква заглавная и в конце точка, но если она есть, то не добавлять
     return text[0].upper()+text[1:]+('.' if text[-1] != '.' else '')
+
+def best_stock(data): #Вывод ключа(key) по максимальному value из словаря
+    return max(data, key=data.__getitem__)
+assert best_stock({"CAC": 10.0, "ATX": 390.2, "WIG": 1.2}) == "ATX"
