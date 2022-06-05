@@ -29,3 +29,9 @@ def correct_sentence(text: str) -> str: #Первая буква заглавн�
 def best_stock(data): #Вывод ключа(key) по максимальному value из словаря
     return max(data, key=data.__getitem__)
 assert best_stock({"CAC": 10.0, "ATX": 390.2, "WIG": 1.2}) == "ATX"
+
+def remove_all_before(items: list, border: int): #От найденного числа до конца
+    return items[items.index(border):] if border in items else items
+
+def replace_last(line: list) -> list: #Последний символ теперь первый
+    return line[-1:]+line[:-1]
