@@ -35,3 +35,14 @@ def remove_all_before(items: list, border: int): #От найденного чи
 
 def replace_last(line: list) -> list: #Последний символ теперь первый
     return line[-1:]+line[:-1]
+
+all_the_same = lambda e: e[1:] == e[:-1] #Находяться ли в списке одинаковые элементы
+
+def checkio(data: list) -> list:
+    return [x for i, x in enumerate(data) if data.count(x) > 1] #Возвращает одинаковые элементы массива(если нужно индексы заменить i на x перед for)
+
+def checkio(array: list) -> int: # Сложить чётные ИНДЕКСЫ и умножить на последнее число
+    return 0 if not array else sum(array[::2])*array[-1]
+
+def left_join(phrases: tuple) -> str: #Замена right на left, даже если они в друом слове
+    return (','.join(phrases)).replace('right','left')
