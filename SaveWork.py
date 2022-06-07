@@ -1,3 +1,8 @@
+mas = [1,2,3,4,5] #Увеличение всех элементов на 10
+print(list(map(lambda x:x+10,mas))) #Map - первый аргумент функция(def,lambda), второй по чему она проходится
+
+print(list(filter(lambda x:x>0,range(-5,6)))) #Fitler то же, что и map(первый аргумент это функция(def,lambda))
+                                              #Но первый аргумент задаёт условия, а по второму оно проходится с этим условием
 
 max_digit = lambda number: max(map(int, str(number))) #Максимальное число из заданного (из 53 max=5)
 
