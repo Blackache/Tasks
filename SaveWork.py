@@ -1,3 +1,4 @@
+#region Интересное
 mas = [1,2,3,4,5] #Увеличение всех элементов на 10
 print(list(map(lambda x:x+10,mas))) #Map - первый аргумент функция(def,lambda), второй по чему она проходится
 
@@ -5,7 +6,9 @@ print(list(filter(lambda x:x>0,range(-5,6)))) #Fitler то же, что и map(�
                                               #Но первый аргумент задаёт условия, а по второму оно проходится с этим условием
 
 max_digit = lambda number: max(map(int, str(number))) #Максимальное число из заданного (из 53 max=5)
+#endregion
 
+#region Site tasks
 def first_word(text: str) -> str: #Вывод первого слова
     text = text.split(' ')
     return text[0]
@@ -51,3 +54,4 @@ def checkio(array: list) -> int: # Сложить чётные ИНДЕКСЫ и
 
 def left_join(phrases: tuple) -> str: #Замена right на left, даже если они в друом слове
     return (','.join(phrases)).replace('right','left')
+#endregion
