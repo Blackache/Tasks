@@ -8,6 +8,14 @@ print(list(filter(lambda x:x>0,range(-5,6)))) #Fitler то же, что и map(�
 max_digit = lambda number: max(map(int, str(number))) #Максимальное число из заданного (из 53 max=5)
 #endregion
 
+#region Интересное - значения
+s = '''hello 
+world'''
+s.splitlines() #Разделяет на строки
+#endregion
+all() #Возращает True если все элементы истинны
+# Пример из Site tasks: all(st[i]<st[i+1] for i in range(len(st)-1))
+
 #region Site tasks
 def first_word(text: str) -> str: #Вывод первого слова
     text = text.split(' ')
@@ -54,4 +62,10 @@ def checkio(array: list) -> int: # Сложить чётные ИНДЕКСЫ и
 
 def left_join(phrases: tuple) -> str: #Замена right на left, даже если они в друом слове
     return (','.join(phrases)).replace('right','left')
+
+def func(text:str): #Сколько строк в тексте
+    return sum(bool(line.strip()) for line in text.splitlines())
+
+def func(st): #Каждое следующее число больше предыдущего
+    return all(st[i]<st[i+1] for i in range(len(st)-1))
 #endregion
