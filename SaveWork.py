@@ -1,6 +1,13 @@
 #region Интересное
+
+print([x**2 for x in range(11) if x%2==0]) #Называется списковое включение
+# [ выражение for цель! in итерируемый— объект! if условие!
+# for цель2 in итерируемый—объект2 if условие2 . . .
+# for цель!! in итерируемый_объектЫ if условие N] - Так тоже можно
+res = [x+y for x in [1,2,3] for y in [10,20,30]]
+
 mas = [1,2,3,4,5] #Увеличение всех элементов на 10
-print(list(map(lambda x:x+10,mas))) #Map - первый аргумент функция(def,lambda), второй по чему она проходится
+print(list(map(lambda x:x+10,mas))) #Map - первый аргумент то что должно проходить, второй по чему она проходится
 
 print(list(filter(lambda x:x>0,range(-5,6)))) #Fitler то же, что и map(первый аргумент это функция(def,lambda))
                                               #Но первый аргумент задаёт условия, а по второму оно проходится с этим условием
@@ -9,12 +16,16 @@ max_digit = lambda number: max(map(int, str(number))) #Максимальное 
 #endregion
 
 #region Интересное - значения
+s=1
+s.isdigit() #Проверка, является ли это числом
+
 s = '''hello 
 world'''
 s.splitlines() #Разделяет на строки
-#endregion
+
 all() #Возращает True если все элементы истинны
 # Пример из Site tasks: all(st[i]<st[i+1] for i in range(len(st)-1))
+#endregion
 
 #region Site tasks
 def first_word(text: str) -> str: #Вывод первого слова
@@ -68,4 +79,10 @@ def func(text:str): #Сколько строк в тексте
 
 def func(st): #Каждое следующее число больше предыдущего
     return all(st[i]<st[i+1] for i in range(len(st)-1))
+
+sum_numbers = lambda text: sum(int(word) for word in text.split() if word.isdigit()) #В тексте найти все цифры, но только разделённые пробелом
+
+def checkio(values: list) -> list: #Сортировка списка по abs(абсолютному значению)
+    values.sort(key=abs)           #key - проходит по всем элементам с тем что после =
+    return values
 #endregion
