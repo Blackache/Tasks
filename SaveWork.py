@@ -84,5 +84,5 @@ sum_numbers = lambda text: sum(int(word) for word in text.split() if word.isdigi
 
 def checkio(values: list) -> list: #Сортировка списка по abs(абсолютному значению)
     values.sort(key=abs)           #key - проходит по всем элементам с тем что после =
-    return values
+    return values;
 #endregion
