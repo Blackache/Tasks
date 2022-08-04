@@ -1,5 +1,7 @@
 #region Интересное
 
+s = 'hello world'; print(s.capitalize()) #Capitalize - делает первую букву большое
+
 print([x**2 for x in range(11) if x%2==0]) #Называется списковое включение
 # [ выражение for цель! in итерируемый— объект! if условие!
 # for цель2 in итерируемый—объект2 if условие2 . . .
@@ -13,6 +15,9 @@ print(list(filter(lambda x:x>0,range(-5,6)))) #Fitler то же, что и map(�
                                               #Но первый аргумент задаёт условия, а по второму оно проходится с этим условием
 
 max_digit = lambda number: max(map(int, str(number))) #Максимальное число из заданного (из 53 max=5)
+
+# * может распаковывать итерируемые объекты print(range(3)) - range(0,3); print(*range(3)) - 0 1 2; или f = dict(hello = 'privet') print(f.keys()) - нормально
+# f = dict(hello = 'privet') print(f.keys()) - dict_keys(['hello'])
 #endregion
 
 #region Интересное - значения
@@ -85,4 +90,28 @@ sum_numbers = lambda text: sum(int(word) for word in text.split() if word.isdigi
 def checkio(values: list) -> list: #Сортировка списка по abs(абсолютному значению)
     values.sort(key=abs)           #key - проходит по всем элементам с тем что после =
     return values
+
+def goes_after(word: str, first: str, second: str) -> bool: #Буква стоит сразу за другой
+    try:
+        return word.index(second)-word.index(first)==1
+    except:
+        return False
+
+def checkio(first, second): #Общие слова в тексте и вывести через заятую отсортирова
+    first_set, second_set = set(first.split(',')),set(second.split(','))
+    common = first_set.intersection(second_set)
+    return ','.join(sorted(common))
+
+def create_phone_number(n): #Записать номер как (123) 456-7895
+    return '({}{}{}) {}{}{}-{}{}{}{}'.format(*n)
+
+print(create_phone_number([1,2,3,4,5,6,7,8,9,2]))
+
+def consecutive(arr, a, b): #Определить идут ли числа последовательно в списке [] 
+    arr
+    return abs(arr.index(a)-arr.index(b))==1
+
+def validate_pin(pin): #Количество чисел 4 или 6 и оно число
+  return len(pin) in (4,6) and pin.isdigit()
+print(validate_pin('12334'))
 #endregion
