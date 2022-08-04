@@ -114,5 +114,4 @@ def consecutive(arr, a, b): #Определить идут ли числа по�
 def validate_pin(pin): #Количество чисел 4 или 6 и оно число
   return len(pin) in (4,6) and pin.isdigit()
 print(validate_pin('12334'))
-#hello
 #endregion
