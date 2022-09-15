@@ -116,5 +116,5 @@ def validate_pin(pin): #Количество чисел 4 или 6 и оно ч�
 print(validate_pin('12334'))
 
 massiv_with_kortejes = [(1, 3, 1), (1, 1, 3), (3, 1, 1), (3, 1, 1), (1, 1, 3), (1, 3, 1)]
-tmp_str = [int(''.join(map(str, a))) for a in massiv_with_kortejes] #Объеденяет числа из кортежей: 131, 113, 311 и т.д. ff
+tmp_str = [int(''.join(map(str, a))) for a in massiv_with_kortejes] #Объеденяет числа из кортежей: 131, 113, 311 и т.д.
 #endregion
