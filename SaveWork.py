@@ -1,6 +1,6 @@
 #region Интересное
 
-s = 'hello world'; print(s.capitalize()) #Capitalize - делает первую букву большое
+s = 'hello world'; print(s.capitalize()) #Capitalize - делает первую букву большой
 
 print([x**2 for x in range(11) if x%2==0]) #Называется списковое включение
 # [ выражение for цель! in итерируемый— объект! if условие!
