@@ -114,4 +114,7 @@ def consecutive(arr, a, b): #Определить идут ли числа по�
 def validate_pin(pin): #Количество чисел 4 или 6 и оно число
   return len(pin) in (4,6) and pin.isdigit()
 print(validate_pin('12334'))
+
+massiv_with_kortejes = [(1, 3, 1), (1, 1, 3), (3, 1, 1), (3, 1, 1), (1, 1, 3), (1, 3, 1)]
+tmp_str = [int(''.join(map(str, a))) for a in massiv_with_kortejes] #Объеденяет числа из кортежей: 131, 113, 311 и т.д.
 #endregion
