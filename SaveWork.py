@@ -115,6 +115,11 @@ def validate_pin(pin): #Количество чисел 4 или 6 и оно ч�
   return len(pin) in (4,6) and pin.isdigit()
 print(validate_pin('12334'))
 
-massiv_with_kortejes = [(1, 3, 1), (1, 1, 3), (3, 1, 1), (3, 1, 1), (1, 1, 3), (1, 3, 1)]
-tmp_str = [int(''.join(map(str, a))) for a in massiv_with_kortejes] #Объеденяет числа из кортежей: 131, 113, 311 и т.д.
-#endregion
+def rearranging(number):
+    from itertools import permutations
+    mas = [int(x) for x in str(number)] #Делает из числа массив чисел
+    f = list(permutations(mas,len(mas))) #Находит все вариации числа
+
+    return [int(''.join(map(str,i))) for i in f] #Объеденяет числа из кортежей: 131, 113, 311 и т.д.
+print(121)
+    #endregion
