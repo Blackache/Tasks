@@ -115,7 +115,7 @@ def validate_pin(pin): #Количество чисел 4 или 6 и оно ч�
   return len(pin) in (4,6) and pin.isdigit()
 print(validate_pin('12334'))
 
-def rearranging(number):
+def rearranging(number): #Нахождение всех вариантов числа
     from itertools import permutations
     mas = [int(x) for x in str(number)] #Делает из числа массив чисел
     f = list(permutations(mas,len(mas))) #Находит все вариации числа
