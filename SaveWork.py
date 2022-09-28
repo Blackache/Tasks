@@ -107,9 +107,8 @@ def create_phone_number(n): #Записать номер как (123) 456-7895
 
 print(create_phone_number([1,2,3,4,5,6,7,8,9,2]))
 
-def consecutive(arr, a, b): #Определить идут ли числа последовательно в списке [] 
-    arr
-    return abs(arr.index(a)-arr.index(b))==1
+def consecutive(arr, a, b): #Определить идут ли числа последовательно в списке []
+    return abs(arr.index(a)-arr.index(b)) == 1
 
 def validate_pin(pin): #Количество чисел 4 или 6 и оно число
   return len(pin) in (4,6) and pin.isdigit()
@@ -125,4 +124,7 @@ print(121)
 
 def anagrams(word, words): return [item for item in words if sorted(item)==sorted(word)] #Анаграмма(комбинации слов)
 #Дано слово и список, в списке мы находим такое, что при определённой комбинации оно дает заданное слово(word)
-    #endregion
+#endregion
+
+def dont_give_me_five(start, end): #Проверка, выводит сумму списка без чисел в которых есть 5(можно любое)
+    return sum('5' not in str(i) for i in range(start, end+1))
