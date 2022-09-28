@@ -21,6 +21,14 @@ max_digit = lambda number: max(map(int, str(number))) #Максимальное 
 #endregion
 
 #region Интересное - значения
+from collections import Counter #Посчитать сколько и каких букв есть в строке !!!!
+s = 'ffffggg' # Counter(s) ответ: Counter({'f': 4, 'g': 3})
+s1 = {'f':1,'g':3,'h':2}
+s2 = {'f':1,'g':3,'h':1}
+print(Counter(s)) # ответ: Counter({'h': 1})
+print(len(Counter(s1)-Counter(s2))) # ответ: 1, так как показывает все оставшиеся буквы, а не сумму всех оставшихся
+# тут осталась одна (h) значит ответ 1, осталось бы две (h,f) написалобы 2, независимо осталось ли суммарно 5 или 10
+
 s=1
 s.isdigit() #Проверка, является ли это числом
 
